@@ -556,8 +556,8 @@ BBTestSetInformationConformanceTestCheckpoint2 (
                            NULL,
                            InformationBlockSize
                            );
-      
-    if ( Status != EFI_INVALID_PARAMETER && Status != EFI_WRITE_PROTECTED) {
+
+    if ( Status != EFI_INVALID_PARAMETER && Status != EFI_WRITE_PROTECTED && Status != EFI_UNSUPPORTED) {
         AssertionType = EFI_TEST_ASSERTION_FAILED;
     } else {
         AssertionType = EFI_TEST_ASSERTION_PASSED;
