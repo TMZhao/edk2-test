@@ -372,11 +372,11 @@ BBTestSetInformationFunctionTestCheckpoint1 (
                              InformationBlockSize1
                              );
 
-    if (Status == EFI_SUCCESS || Status ==  EFI_WRITE_PROTECTED)
-      AssertionType = EFI_TEST_ASSERTION_PASSED;  
+    if (Status == EFI_SUCCESS || Status ==  EFI_WRITE_PROTECTED || Status == EFI_UNSUPPORTED)
+      AssertionType = EFI_TEST_ASSERTION_PASSED;
     else
-      AssertionType = EFI_TEST_ASSERTION_FAILED; 
-    
+      AssertionType = EFI_TEST_ASSERTION_FAILED;
+
     StandardLib->RecordAssertion (
                      StandardLib,
                      AssertionType,
